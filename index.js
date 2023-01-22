@@ -10,6 +10,9 @@ const categories = require("./data/Categories.json");
 const news=require("./data/news.json");
 
 
+
+
+
 app.get("/", (req, res) => {
   res.send("News API is Running...");
 });

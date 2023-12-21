@@ -3,7 +3,7 @@ const app = express();
 const cors = require("cors");
 const port = process.env.PORT || 5000;
 
-// Middleware
+// Middleware use for cors policy
 app.use(cors());
 
 const categories = require("./data/Categories.json");
@@ -45,7 +45,7 @@ app.get('/news/:id',(req,res)=>{
    
     const id=req.params.id;
     const selectedNews=news.find(n=>n._id===id)
-   res.send(selectedNews);
+    res.send(selectedNews);
    
 })
 
